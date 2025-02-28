@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência de Eventos Gamer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://img.freepik.com/fotos-gratis/renderizacao-3d-de-fundo-de-textura-hexagonal_23-2150796421.jpg?t=st=1740693769~exp=1740697369~hmac=950aeeb487b8f7fa65b10cda2b165b72c2836169ac4f072cc4e50f29a86237c1&w=1380') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(15, 15, 15, 0.9);
+            color: #00ffcc;
+            padding: 1.5em 0;
+            text-align: center;
+        }
+        header2 {
+            background-color: rgba(15, 15, 15, 0.9);
+            color: #86fdd5;
+            padding: 1.5em 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 1em 0;
+        }
+        nav a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2em;
+            text-align: center;
+            background-color: rgba(26, 26, 26, 0.8);
+            border-radius: 8px;
+            margin: 2em auto;
+            max-width: 1200px;
+        }
+        .eventos, .fotos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .card {
+            background-color: #292929;
+            border: 1px solid #444;
+            border-radius: 8px;
+            width: 300px;
+            padding: 1em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        form {
+            background-color: #292929;
+            padding: 2em;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 2em auto;
+        }
+        label, select, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        select, input, button {
+            padding: 0.5em;
+            border: none;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #00ffcc;
+            color: #1a1a1a;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #008f99;
+        }
+        footer {
+            background-color: rgba(15, 15, 15, 0.9);
+            color: #00ffcc;
+            text-align: center;
+            padding: 1.5em 0;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <h1><l1>GAMER JR-BM</l1></h1></B>
+        <header2><h2>__Eventos__</h2></header2>
+        <p><i>Transformamos sua paixão em grandes eventos!</i></p>
+    </header>
+    <nav>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#eventos">Eventos Realizados</a>
+        <a href="#fotos">Galeria de Fotos</a>
+        <a href="#contato">Contato</a>
+        <a href="#contratar">Contratar</a>
+    </nav>
+    <section id="eventos" class="container">
+        <h2>Nossos Eventos</h2>
+        <div class="eventos">
+            <div class="card">
+                <h3>Campeonatos de E-Sports</h3>
+                <p>Organizamos torneios com estrutura profissional e premiações incríveis.</p>
+            </div>
+            <div class="card">
+                <h3>Lançamentos de Jogos</h3>
+                <p>Eventos temáticos para destacar os maiores lançamentos do ano.</p>
+            </div>
+            <div class="card">
+                <h3>Meet & Greet</h3>
+                <p>Encontros exclusivos com streamers e criadores de conteúdo.</p>
+            </div>
+        </div>
+    </section>
+    <section id="fotos" class="container">
+        <h2>Galeria de Fotos</h2>
+        <div class="fotos">
+            <div class="card"><p>Foto 1</p></div>
+            <div class="card"><p>Foto 2</p></div>
+            <div class="card"><p>Foto 3</p></div>
+        </div>
+    </section>
+    <section id="contratar" class="container">
+        <h2>Contratar Nossos Serviços</h2>
+        <form onsubmit="return showAlert()">
+            <label for="qtd-pessoas">Quantidade de pessoas:</label>
+            <select id="qtd-pessoas" name="qtd-pessoas">
+                <option value="100">Até 100 pessoas</option>
+                <option value="200">De 100 a 200</option>
+                <option value="300">De 201 a 300</option>
+                <option value="301">Acima de 300</option>
+            </select>
+
+            <label for="tipo-evento">Tipo de evento:</label>
+            <select id="tipo-evento" name="tipo-evento">
+                <option value="casamento">Casamento</option>
+                <option value="aniversario">Aniversário</option>
+                <option value="formatura">Formatura</option>
+                <option value="outros">Outros (Qual?)</option>
+            </select>
+
+            <label for="descricao">Se "Outros", descreva o evento:</label>
+            <input type="text" id="descricao" name="descricao">
+
+            <button type="submit">Solicitar Orçamento</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Agência de Eventos Gamer. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert('Solicitação enviada! Entraremos em contato em breve.');
+            return false;
+        }
+    </script>
+</body>
+</html>
