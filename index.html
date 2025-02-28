@@ -92,11 +92,27 @@
             padding: 1.5em 0;
             margin-top: 2em;
         }
+
+        /* Estilos para a galeria de fotos */
+        .fotos img {
+            width: 100%; /* As imagens ocuparão toda a largura disponível dentro do card */
+            height: auto; /* Manterá a proporção original das imagens */
+            border-radius: 8px; /* Bordas arredondadas para as imagens */
+            object-fit: cover; /* As imagens cobrirão o espaço sem distorcer */
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .fotos img {
+                width: 100%; /* As imagens ocupam toda a largura disponível */
+                height: 200px; /* Defina uma altura fixa para garantir um layout consistente */
+                object-fit: cover; /* Manterá a proporção sem distorcer */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        
         <h1><l1>GAMER JR-BM</l1></h1></B>
         <header2><h2>__Eventos__</h2></header2>
         <p><i>Transformamos sua paixão em grandes eventos!</i></p>
@@ -129,35 +145,40 @@
     <section id="fotos" class="container">
         <h2>Galeria de Fotos</h2>
         <div class="fotos">
-            <div class="card"><p>Foto 1</p></div>
-            <div class="card"><p>Foto 2</p></div>
-            <div class="card"><p>Foto 3</p></div>
+            <div class="card">
+                <img src="https://img.gta5-mods.com/q95/images/wedding-map-gta-fivem-friendly-xml-ymap/9ec0dd-1.png" alt="Foto 1">
+            </div>
+            <div class="card">
+                <img src="https://a-static.mlcdn.com.br/800x560/festa-aniversario-gta-grand-theft-auto-decoracao-kit-prata-impakto-visual/oliststore/mgl30vpbsr7kdqj0/d04c372d62601788b8e509586338c4ec.jpeg" alt="Foto 2">
+            </div>
+            <div class="card">
+                <img src="https://i.ytimg.com/vi/eniL4XG-Tok/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBokY2DVBOcpW05DAJoupEM6gds_A" alt="Foto 3">
+            </div>
         </div>
     </section>
-    <section id="contratar" class="container">
-        <h2>Contratar Nossos Serviços</h2>
-        <form onsubmit="return showAlert()">
-            <label for="qtd-pessoas">Quantidade de pessoas:</label>
-            <select id="qtd-pessoas" name="qtd-pessoas">
-                <option value="100">Até 100 pessoas</option>
-                <option value="200">De 100 a 200</option>
-                <option value="300">De 201 a 300</option>
-                <option value="301">Acima de 300</option>
-            </select>
+    <h2>Contratar Nossos Serviços</h2>
+    <form onsubmit="return showAlert()">
+        <label for="qtd-pessoas">Quantidade de pessoas:</label>
+        <select id="qtd-pessoas" name="qtd-pessoas">
+            <option value="100">Até 100 pessoas</option>
+            <option value="200">De 100 a 200</option>
+            <option value="300">De 201 a 300</option>
+            <option value="301">Acima de 300</option>
+        </select>
 
-            <label for="tipo-evento">Tipo de evento:</label>
-            <select id="tipo-evento" name="tipo-evento">
-                <option value="casamento">Casamento</option>
-                <option value="aniversario">Aniversário</option>
-                <option value="formatura">Formatura</option>
-                <option value="outros">Outros (Qual?)</option>
-            </select>
+        <label for="tipo-evento">Tipo de evento:</label>
+        <select id="tipo-evento" name="tipo-evento">
+            <option value="casamento">Casamento</option>
+            <option value="aniversario">Aniversário</option>
+            <option value="formatura">Formatura</option>
+            <option value="outros">Outros (Qual?)</option>
+        </select>
 
-            <label for="descricao">Se "Outros", descreva o evento:</label>
-            <input type="text" id="descricao" name="descricao">
+        <label for="descricao">Se "Outros", descreva o evento:</label>
+        <input type="text" id="descricao" name="descricao">
 
-            <button type="submit">Solicitar Orçamento</button>
-        </form>
+        <button type="submit">Solicitar Orçamento</button>
+    </form>
     </section>
     <footer>
         <p>&copy; 2025 Agência de Eventos Gamer. Todos os direitos reservados.</p>
